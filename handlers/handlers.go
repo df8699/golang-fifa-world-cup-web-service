@@ -42,7 +42,7 @@ func AddNewWinner(res http.ResponseWriter, req *http.Request) {
 
 	err := data.AddNewWinner(req.Body)
 	if err != nil {
-		res.WriteHeader(http.StatusUnprecessableEntity)
+		res.WriteHeader(http.StatusUnprocessableEntity)
 		return
 	}
 	res.WriteHeader(http.StatusCreated)
